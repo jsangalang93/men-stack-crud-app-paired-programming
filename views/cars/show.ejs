@@ -24,7 +24,8 @@
 
     a {
         text-decoration: none;
-        color: black;
+        color: white;
+        text-shadow: black 2px 2px 2px;
         font-size: 1.5em;
     }
 
@@ -33,7 +34,8 @@
         background-color: #f0f0f0;
         text-align: center;
         background-image: url('/assets/fact2.png');
-        background-size: stretch;
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
     }
     h1 {
         font-family: 'Faster One', cursive;
@@ -63,7 +65,7 @@
     <a href="/cars">All Cars</a>
 </nav>
 <body>
-    <div class="postDiv"
+    <div class="postDiv">
         <h1>
             <%= car.make %> <%= car.model %> <%= car.year %>
 
