@@ -3,22 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+<style>
+    body {
+        font-family: 'Orbitron', sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+        background-image: url('/assets/fact2.png');
+        background-size: stretch;
+    }
+    h1 {
+        font-family: 'Faster One', cursive;
+        color: black;
+        text-shadow: orange 20px 4px 10px;
+        font-size: 3em;
+        /* color: #333; */
+    }
+
+    .postDiv {
+        background-color: orange;
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 1);
+    }
+
+</style>
+<nav>
+    <a href="/">Home</a>
+    <a href="/cars">All Cars</a>
+</nav>
 <body>
     <h1>Post a new car!</h1>
-    <form action="/cars" method="POST">
+    <div class = postDiv>
+        <form action="/cars" method="POST">
 
-        <label>Make:</label>
-        <input type="text" name="make"><br>
+            <label>Make:</label>
+            <input type="text" name="make"><br><br>
 
-        <label>Model:</label>
-        <input type="text" name="model"><br>
+            <label>Model:</label>
+            <input type="text" name="model"><br><br>
 
-        <label>Year:</label>
-        <input type="text" name="year"><br>
-        
-        <button type="submit">Add Car</button>
+            <label>Year:</label>
+            <input type="text" name="year"><br><br>
+            
+            <button type="submit">Add Car</button>
         </form>
+    </div>
 </body>
 </html>

@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const path = require('path');
+
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -16,6 +18,9 @@ app.use(express.urlencoded({extended: false}));
 
 app.use(methodOverride('_method'));
 app.use(morgan('dev'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
 res.render('home.ejs');
