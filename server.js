@@ -46,7 +46,7 @@ app.post('/cars', async (req, res) => {
 // -----------------------------READ ROUTE------------------------------
 
 app.get('/cars', async (req, res) => {
-        const allCars = await Car.find();
+        const allCars = await Car.find({});
         console.log(allCars);
     res.render('cars/index.ejs', {cars: allCars});
 })
