@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<nav>
+    <a href="/cars">All Cars</a>
+    <a href="/cars/new">New Car</a>
+    <a href="/cars/search">Search</a>
+</nav>
+
+<body>
+    <h1>All Cars</h1>
+    <ul>
+    <% cars.forEach((car)=> { %>
+        <li>
+            <!-- dynamic HREF -->
+            <!-- <a href="#"> <%= car.make %> </a> -->
+            <a href='/cars/<%=car.id%>'>
+                <%= car.make %>
+            </a>
+        </li>
+    <% }) %>
+    </ul>
+</body>
+</html>
