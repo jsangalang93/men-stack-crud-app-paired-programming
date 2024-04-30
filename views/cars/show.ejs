@@ -8,6 +8,26 @@
     <title>Document</title>
 </head>
 <style>
+    nav {
+            display: flex;
+            justify-content: space-evenly;
+            /* background-color: orange; */
+            padding: 10px;
+            border-radius: 10px;
+            background-image: url('/assets/chrome.png');
+            background-position: bottom;
+            font-size: .75em;
+            text-decoration: none;
+            margin: 20px;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5em;
+    }
+
     body {
         font-family: 'Orbitron', sans-serif;
         background-color: #f0f0f0;
@@ -24,6 +44,10 @@
         /* color: #333; */
     }
 
+    button {
+        font-family: 'Orbitron';
+    }
+
     .postDiv {
         background-color: orange;
         width: 50%;
@@ -34,13 +58,17 @@
     }
 
 </style>
+<nav>
+    <a href="/">Home</a>
+    <a href="/cars">All Cars</a>
+</nav>
 <body>
     <div class="postDiv"
         <h1>
             <%= car.make %> <%= car.model %> <%= car.year %>
 
         </h1>
-        <form action="/cars/<%=car._id%>?_method=DELETE" method="POST">
+        <form action="/cars/<%=car._id%>?_method=DELETE" method="POST"><br>
             <button type="submit">Delete</button>
         </form>
         <br><br>
