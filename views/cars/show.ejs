@@ -10,10 +10,10 @@
         <%= car.make %> <%= car.model %> <%= car.year %>
 
     </h1>
-    <a href="/cars/<%=car._id%>/edit">Edit <%=car.name%></a>
-    <br><br>
     <form action="/cars/<%=car._id%>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
     </form>
+    <br><br>
+    <a href="/cars/<%=car._id%>/edit">Edit <%=car.name%></a>
 </body>
 </html>

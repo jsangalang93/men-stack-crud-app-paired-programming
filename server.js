@@ -47,7 +47,7 @@ app.get('/cars/:id', async (req, res) => {
     res.render('cars/show.ejs', {car: foundCar});
 })
 
-// -----------------------------END READ ROUTE------------------------------
+// -----------------------------END READ ROUTE-----------------------------
 
 // ------------------------------DELETE ROUTE------------------------------
 
@@ -58,11 +58,32 @@ app.delete('/cars/:id', async (req, res) => {
 
 // ---------------------------END DELETE ROUTE------------------------------
 
-// --------------------------------EDIT ROUTE-------------------------------
+// --------------------------------UPDATE ROUTE-----------------------------
+
+app.get('/cars/:id/edit', async (req, res) => {
+    const foundCar = await Car.findById(req.params.id);
+    res.render('cars/edit.ejs', {car: foundCar});
+})
+
+app.put('/cars/:id', async (req, res) => {
+    await Car.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    res.redirect(`/cars/${req.params.id}`);
+})
+
+// ----------------------------END UPDATE ROUTE-----------------------------
 
 
 
-// ------------------------------END EDIT ROUTE--------------------------------
+
+
+
+
+
+
+
+
+
+// ------------------------------END EDIT ROUTE-----------------------------
 
 app.listen(3012, () => {
     console.log('listening on 3012');
