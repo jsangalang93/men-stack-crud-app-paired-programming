@@ -10,7 +10,11 @@ const methodOverride = require('method-override');
 const morgan = require('morgan');
 
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI,)
+mongoose.connect(process.env.MONGODB_URI)
+// mongoDB connection on error
+mongoose.connection.on("error", (error) => {
+    console.log("MongoDB connection error ", error);
+  });
 
 const Car = require('./models/car');
 
