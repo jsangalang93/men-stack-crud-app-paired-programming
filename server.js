@@ -94,6 +94,6 @@ app.put('/cars/:id', async (req, res) => {
 
 // ------------------------------END EDIT ROUTE-----------------------------
 
-app.listen(3012, () => {
-    console.log('listening on 3012');
+app.listen(3009, () => {
+    console.log('listening on 3009');
 })
